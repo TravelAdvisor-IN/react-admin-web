@@ -35,7 +35,7 @@ function NavigationPage()
         <p>Failed to load API</p>
       ) : ( */}
         <div>
-            {/* <BrowserRouter>
+            <BrowserRouter>
             <Routes>
               <Route>
                 <Route index element={<LoginPage/>} />
@@ -45,8 +45,8 @@ function NavigationPage()
                 <Route path ="new/viewEditPlace/:id" element={<ViewEditPlace/>}/>
               </Route>
             </Routes>
-          </BrowserRouter> */}
-          <h1>Hello</h1>
+          </BrowserRouter>
+
         </div>
       {/* )} */}
     </div>
