@@ -1,15 +1,28 @@
-name: Build and Deploy
+name: Deploy
+
 on:
   push:
     branches:
-      - dev  # Change this to your main branch name if it's different
+      - dev  # Change this to the branch you want to trigger the deployment on
+  pull_request:
+    branches:
+      - dev  # Change this to the branch you want to trigger the deployment on
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Build
-        run: npm run build
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and deploy
+        run: npm run deploy
