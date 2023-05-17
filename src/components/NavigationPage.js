@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Dashboard from '../pages/Dashboard';
+import Dashboard from '../pages/Dashboard';
 import LoginPage from '../pages/LoginPage';
 // import Maps from '../pages/Maps';
 // import NewEntryPage from '../pages/NewEntryPage';
@@ -40,8 +40,8 @@ function NavigationPage()
             <Routes>
               <Route>
                 <Route index element={<LoginPage/>} />
-                {/* <Route path="/dashboard" element={<Dashboard/>} />
-                <Route path="/new" element={<NewEntryPage/>} />
+                 <Route path="/dashboard" element={<Dashboard/>} />
+               {/* <Route path="/new" element={<NewEntryPage/>} />
                 <Route path="/maps" element={<Maps/>} />
                 <Route path ="new/viewEditPlace/:id" element={<ViewEditPlace/>}/> */}
               </Route>
