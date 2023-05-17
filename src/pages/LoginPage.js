@@ -16,53 +16,53 @@ function LoginPage()
     const [user_password, setPassword] = useState('');
 
     const cookieValue = cookies._state;
-    // console.log(cookieValue);
+    console.log(cookieValue);
 
-    if (cookieValue!==undefined)
-    {
-      navigate('dashboard');
-    }
+    // if (cookieValue!==undefined)
+    // {
+    //   navigate('dashboard');
+    // }
 
-    const postData = async () => {
-        try {
-          const response = await fetch(API+'/loginAdmin', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ user_id: user_id, user_email: user_email, user_password:user_password }),
-          });
-          const responseData = await response.json();
-          // setData(responseData);
-          // console.log(responseData);
+    // const postData = async () => {
+    //     try {
+    //       const response = await fetch(API+'/loginAdmin', {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ user_id: user_id, user_email: user_email, user_password:user_password }),
+    //       });
+    //       const responseData = await response.json();
+    //       // setData(responseData);
+    //       // console.log(responseData);
 
 
-          if (responseData.status === '200') {
-            // Navigate to the next page
-            navigate('dashboard');
-            setCookie('_state', responseData.user_uid, { path: '/' });
+    //       if (responseData.status === '200') {
+    //         // Navigate to the next page
+    //         navigate('dashboard');
+    //         setCookie('_state', responseData.user_uid, { path: '/' });
 
-          }else if(responseData.status === '401')
-          {
-               console.log("PM"); 
-          }
-          else if (responseData.status==='404')
-          {
-            console.log("UNF");
-          }
-          else if (responseData.status==='412')
-          {
-            console.log("ENF");
-          }
-          else
-          {
-            console.log("Something went wrong!")
-          }
+    //       }else if(responseData.status === '401')
+    //       {
+    //            console.log("PM"); 
+    //       }
+    //       else if (responseData.status==='404')
+    //       {
+    //         console.log("UNF");
+    //       }
+    //       else if (responseData.status==='412')
+    //       {
+    //         console.log("ENF");
+    //       }
+    //       else
+    //       {
+    //         console.log("Something went wrong!")
+    //       }
 
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      };
+    //     } catch (error) {
+    //       console.error('Error:', error);
+    //     }
+    //   };
 
 
     return (
@@ -103,7 +103,9 @@ function LoginPage()
                             onChange={(e) => setPassword(e.target.value)}
                         />
 
-                        <button  className="lginButton" onClick={postData}>LOGIN</button >
+                        <button  className="lginButton" 
+                        // onClick={postData} 
+                        >LOGIN</button >
 
                     </div>
 
