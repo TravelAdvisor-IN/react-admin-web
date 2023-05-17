@@ -38,13 +38,11 @@ function NavigationPage()
         
             <BrowserRouter basename="/react-admin-web">
             <Routes>
-              <Route>
                 <Route index element={<LoginPage/>} />
                  <Route path="/dashboard" element={<Dashboard/>} />
                {/* <Route path="/new" element={<NewEntryPage/>} />
                 <Route path="/maps" element={<Maps/>} />
                 <Route path ="new/viewEditPlace/:id" element={<ViewEditPlace/>}/> */}
-              </Route>
             </Routes>
           </BrowserRouter>
 
