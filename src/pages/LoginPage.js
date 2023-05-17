@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 // import { API } from '../Constants';
-// import { useNavigate } from 'react-router';
-// import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router';
+import { useCookies } from 'react-cookie';
 
 
 function LoginPage()
 {
-    // const [cookies, setCookie] = useCookies(['user']);
+    const [cookies, setCookie] = useCookies(['user']);
    
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // // const [setData] = useState('');
 
     const [user_id, setUserID] = useState('');

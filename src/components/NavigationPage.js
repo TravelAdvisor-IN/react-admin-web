@@ -1,4 +1,4 @@
-// import {BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Dashboard from '../pages/Dashboard';
 import LoginPage from '../pages/LoginPage';
 // import Maps from '../pages/Maps';
@@ -35,18 +35,18 @@ function NavigationPage()
         <p>Failed to load API</p>
       ) : ( */}
         <div>
-          <LoginPage/>
-            {/* <BrowserRouter>
+        
+            <BrowserRouter basename="/react-admin-web">
             <Routes>
               <Route>
                 <Route index element={<LoginPage/>} />
-                <Route path="/dashboard" element={<Dashboard/>} />
+                {/* <Route path="/dashboard" element={<Dashboard/>} />
                 <Route path="/new" element={<NewEntryPage/>} />
                 <Route path="/maps" element={<Maps/>} />
-                <Route path ="new/viewEditPlace/:id" element={<ViewEditPlace/>}/>
+                <Route path ="new/viewEditPlace/:id" element={<ViewEditPlace/>}/> */}
               </Route>
             </Routes>
-          </BrowserRouter> */}
+          </BrowserRouter>
 
         </div>
       {/* )} */}
