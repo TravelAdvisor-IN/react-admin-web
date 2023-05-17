@@ -9,7 +9,7 @@ function LoginPage()
     const [cookies, setCookie] = useCookies(['user']);
    
     const navigate = useNavigate();
-    const [setData] = useState('');
+    // const [setData] = useState('');
 
     const [user_id, setUserID] = useState('');
     const [user_email, setEmail] = useState('');
@@ -33,7 +33,7 @@ function LoginPage()
             body: JSON.stringify({ user_id: user_id, user_email: user_email, user_password:user_password }),
           });
           const responseData = await response.json();
-          setData(responseData);
+          // setData(responseData);
           // console.log(responseData);
 
 
