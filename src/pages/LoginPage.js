@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { API } from '../Constants';
+import { API } from '../Constants';
 import { useNavigate } from 'react-router';
 import { useCookies } from 'react-cookie';
 
@@ -23,46 +23,46 @@ function LoginPage()
       navigate('dashboard');
     }
 
-    // const postData = async () => {
-    //     try {
-    //       const response = await fetch(API+'/loginAdmin', {
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ user_id: user_id, user_email: user_email, user_password:user_password }),
-    //       });
-    //       const responseData = await response.json();
-    //       // setData(responseData);
-    //       // console.log(responseData);
+    const postData = async () => {
+        try {
+          const response = await fetch(API+'/loginAdmin', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ user_id: user_id, user_email: user_email, user_password:user_password }),
+          });
+          const responseData = await response.json();
+          setData(responseData);
+          // console.log(responseData);
 
 
-    //       if (responseData.status === '200') {
-    //         // Navigate to the next page
-    //         navigate('dashboard');
-    //         setCookie('_state', responseData.user_uid, { path: '/' });
+          if (responseData.status === '200') {
+            // Navigate to the next page
+            navigate('dashboard');
+            setCookie('_state', responseData.user_uid, { path: '/' });
 
-    //       }else if(responseData.status === '401')
-    //       {
-    //            console.log("PM"); 
-    //       }
-    //       else if (responseData.status==='404')
-    //       {
-    //         console.log("UNF");
-    //       }
-    //       else if (responseData.status==='412')
-    //       {
-    //         console.log("ENF");
-    //       }
-    //       else
-    //       {
-    //         console.log("Something went wrong!")
-    //       }
+          }else if(responseData.status === '401')
+          {
+               console.log("PM"); 
+          }
+          else if (responseData.status==='404')
+          {
+            console.log("UNF");
+          }
+          else if (responseData.status==='412')
+          {
+            console.log("ENF");
+          }
+          else
+          {
+            console.log("Something went wrong!")
+          }
 
-    //     } catch (error) {
-    //       console.error('Error:', error);
-    //     }
-    //   };
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
 
 
     return (
@@ -104,7 +104,7 @@ function LoginPage()
                         />
 
                         <button  className="lginButton" 
-                        // onClick={postData} 
+                        onClick={postData} 
                         >LOGIN</button >
 
                     </div>
