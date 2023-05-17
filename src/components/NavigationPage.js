@@ -1,32 +1,32 @@
-import {BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
+// import {BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Dashboard from '../pages/Dashboard';
 import LoginPage from '../pages/LoginPage';
-import Maps from '../pages/Maps';
-import NewEntryPage from '../pages/NewEntryPage';
-import ViewEditPlace from '../pages/ViewEditPlace';
-import { useEffect, useState } from 'react';
-import { API } from '../Constants';
+// import Maps from '../pages/Maps';
+// import NewEntryPage from '../pages/NewEntryPage';
+// import ViewEditPlace from '../pages/ViewEditPlace';
+// import { useEffect, useState } from 'react';
+// import { API } from '../Constants';
 
 function NavigationPage() 
 {
 
-  const [apiError, setApiError] = useState(null);
+  // const [apiError, setApiError] = useState(null);
 
-  useEffect(() => {
-    const checkApiReachability = async () => {
-      try {
-        const response = await fetch(API+"/test");
-        if (!response.ok) {
-          throw new Error('API not reachable');
-        }
-        // API is reachable, continue with the actual flow
-      } catch (error) {
-        setApiError(error.message);
-      }
-    };
+  // useEffect(() => {
+  //   const checkApiReachability = async () => {
+  //     try {
+  //       const response = await fetch(API+"/test");
+  //       if (!response.ok) {
+  //         throw new Error('API not reachable');
+  //       }
+  //       // API is reachable, continue with the actual flow
+  //     } catch (error) {
+  //       setApiError(error.message);
+  //     }
+  //   };
 
     // checkApiReachability();
-  }, []);
+  // }, []);
 
     return (
 
