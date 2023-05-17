@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-admin-web/static/css/main.3189b719.css",
-    "main.js": "/react-admin-web/static/js/main.b3935167.js",
+    "main.js": "/react-admin-web/static/js/main.5df82f10.js",
     "static/js/787.71f97e85.chunk.js": "/react-admin-web/static/js/787.71f97e85.chunk.js",
     "static/media/fa-solid-900.svg": "/react-admin-web/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
     "static/media/fa-brands-400.svg": "/react-admin-web/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
@@ -23,11 +23,11 @@
     "static/media/arrow_left.svg": "/react-admin-web/static/media/arrow_left.db6e2d88c7c35a775ce4.svg",
     "static/media/arrow_right.svg": "/react-admin-web/static/media/arrow_right.f7c6ac6d310d3b82f0a0.svg",
     "main.3189b719.css.map": "/react-admin-web/static/css/main.3189b719.css.map",
-    "main.b3935167.js.map": "/react-admin-web/static/js/main.b3935167.js.map",
+    "main.5df82f10.js.map": "/react-admin-web/static/js/main.5df82f10.js.map",
     "787.71f97e85.chunk.js.map": "/react-admin-web/static/js/787.71f97e85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3189b719.css",
-    "static/js/main.b3935167.js"
+    "static/js/main.5df82f10.js"
   ]
 }
