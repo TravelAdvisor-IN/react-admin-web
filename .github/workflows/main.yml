@@ -1,0 +1,15 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - dev  # Change this to your main branch name if it's different
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Build
+        run: npm run build
