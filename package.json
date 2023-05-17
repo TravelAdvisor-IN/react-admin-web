@@ -1,4 +1,5 @@
 {
+  "homepage": "https://traveladvisor-in.github.io/react-admin-web",
   "name": "travelexpert_admin",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +27,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+    "deploy": "dev -d build"
   },
   "eslintConfig": {
     "extends": [
