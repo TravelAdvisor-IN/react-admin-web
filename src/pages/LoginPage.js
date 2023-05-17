@@ -9,19 +9,19 @@ function LoginPage()
     const [cookies, setCookie] = useCookies(['user']);
    
     const navigate = useNavigate();
-    // // const [setData] = useState('');
+    const [setData] = useState('');
 
     const [user_id, setUserID] = useState('');
     const [user_email, setEmail] = useState('');
     const [user_password, setPassword] = useState('');
 
-    // const cookieValue = cookies._state;
-    // console.log(cookieValue);
+    const cookieValue = cookies._state;
+    console.log(cookieValue);
 
-    // if (cookieValue!==undefined)
-    // {
-    //   navigate('dashboard');
-    // }
+    if (cookieValue!==undefined)
+    {
+      navigate('dashboard');
+    }
 
     // const postData = async () => {
     //     try {
