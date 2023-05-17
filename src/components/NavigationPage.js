@@ -25,15 +25,15 @@ function NavigationPage()
       }
     };
 
-    checkApiReachability();
+    // checkApiReachability();
   }, []);
 
     return (
 
     <div>
-      {apiError ? (
+      {/* {apiError ? (
         <p>Failed to load API</p>
-      ) : (
+      ) : ( */}
         <div>
              <BrowserRouter>
             <Routes>
@@ -47,7 +47,7 @@ function NavigationPage()
             </Routes>
           </BrowserRouter>
         </div>
-      )}
+      {/* )} */}
     </div>
 
     );
